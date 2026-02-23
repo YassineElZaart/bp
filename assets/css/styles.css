@@ -1032,7 +1032,7 @@ ul { list-style: none; }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   gap: 50px;
   margin-bottom: 60px;
 }
@@ -1081,6 +1081,45 @@ ul { list-style: none; }
 .footer-col ul li { margin-bottom: 10px; }
 .footer-col ul li a { font-size: 0.87rem; transition: var(--transition); }
 .footer-col ul li a:hover { color: var(--gold-lighter); }
+
+.footer-branches h4 {
+  color: var(--white);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.footer-branches-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.footer-branch {
+  padding: 14px 16px;
+  background: rgba(139, 125, 75, 0.06);
+  border: 1px solid rgba(139, 125, 75, 0.1);
+  border-radius: 10px;
+}
+.footer-branch strong {
+  display: block;
+  color: var(--gold-lighter);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+.footer-branch p {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.footer-branch a {
+  font-size: 0.78rem;
+  color: var(--gold-light);
+  transition: color 0.2s ease;
+}
+.footer-branch a:hover { color: var(--white); }
 .footer-bottom {
   padding-top: 30px;
   border-top: 1px solid rgba(139,125,75,0.1);
@@ -1112,7 +1151,8 @@ ul { list-style: none; }
   .visas-grid { grid-template-columns: repeat(4, 1fr); }
   .contact .container { grid-template-columns: 1fr; }
   .contact-side { padding: 40px 30px; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-branches-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1128,6 +1168,7 @@ ul { list-style: none; }
   .visas-grid { grid-template-columns: repeat(3, 1fr); }
   .umbrella-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+  .footer-branches-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
 
   .nav-links.show-mobile {
