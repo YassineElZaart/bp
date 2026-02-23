@@ -767,36 +767,63 @@ ul { list-style: none; }
 
 
 /* ===== VISAS ===== */
-.visas {
+.services {
   padding: 100px 0;
   background: var(--light-bg);
 }
-.visas-header {
+.services-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
-.visas-header .section-subtitle { margin: 0 auto; }
-.visas-grid {
+.services-header .section-subtitle { margin: 0 auto; }
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
-.visa-card {
+.service-card {
   background: var(--white);
-  padding: 25px 15px;
-  border-radius: var(--radius);
-  text-align: center;
+  padding: 30px 24px;
+  border-radius: 16px;
   border: 1px solid var(--border);
-  transition: var(--transition);
-  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
-.visa-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow);
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-lighter));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
   border-color: var(--gold);
 }
-.visa-flag { font-size: 2rem; margin-bottom: 10px; }
-.visa-card h4 { font-size: 0.82rem; font-weight: 600; color: var(--black); }
+.service-card:hover::before { opacity: 1; }
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+.service-card h4 {
+  font-family: 'Archivo', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+.service-card p {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
 
 
 /* ===== UMBRELLA (sub-brands) ===== */
@@ -1142,7 +1169,7 @@ ul { list-style: none; }
   .hero-visual { display: none; }
   .branches-grid { grid-template-columns: repeat(3, 1fr); }
   .about .container { grid-template-columns: 1fr; gap: 50px; }
-  .visas-grid { grid-template-columns: repeat(4, 1fr); }
+  .services-grid { grid-template-columns: repeat(3, 1fr); }
   .contact .container { grid-template-columns: 1fr; }
   .contact-side { padding: 40px 30px; }
   .footer-grid { grid-template-columns: 1fr; }
@@ -1169,7 +1196,7 @@ ul { list-style: none; }
   .dept-grid { grid-template-columns: repeat(3, 1fr); }
   .dept-featured-people { grid-template-columns: repeat(3, 1fr); }
   .contact-form { grid-template-columns: 1fr; }
-  .visas-grid { grid-template-columns: repeat(3, 1fr); }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
   .umbrella-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 30px; }
   .footer-branches-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1197,6 +1224,6 @@ ul { list-style: none; }
   .dept-grid { grid-template-columns: repeat(2, 1fr); }
   .dept-featured-inner { flex-direction: column; gap: 20px; padding: 24px 20px; }
   .dept-featured-people { grid-template-columns: repeat(2, 1fr); }
-  .visas-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-grid { grid-template-columns: 1fr; }
   .cta-buttons { flex-direction: column; align-items: center; }
 }
