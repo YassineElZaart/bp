@@ -153,7 +153,7 @@ ul { list-style: none; }
   align-items: center;
 }
 .logo-img {
-  height: 140px;
+  height: 180px;
   width: auto;
   filter: drop-shadow(0 0 8px rgba(196, 178, 130, 0.3));
   transition: filter 0.3s ease, transform 0.3s ease;
@@ -163,7 +163,7 @@ ul { list-style: none; }
   filter: drop-shadow(0 0 12px rgba(196, 178, 130, 0.5));
 }
 .footer .logo-img {
-  height: 140px;
+  height: 160px;
 }
 .footer .logo:hover .logo-img {
   filter: drop-shadow(0 0 12px rgba(196, 178, 130, 0.5));
@@ -1150,7 +1150,17 @@ ul { list-style: none; }
 }
 
 @media (max-width: 768px) {
-  .nav-links, .nav-cta { display: none; }
+  .nav-links { display: none; }
+  .nav-cta {
+    display: flex;
+    gap: 6px;
+    margin-right: auto;
+    margin-left: 12px;
+  }
+  .nav-cta .btn {
+    padding: 7px 14px;
+    font-size: 0.7rem;
+  }
   .mobile-toggle { display: flex; }
   .hero { min-height: auto; padding: 120px 0 80px; }
   .hero-stats { gap: 25px; }
