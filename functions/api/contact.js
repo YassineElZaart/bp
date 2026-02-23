@@ -20,7 +20,7 @@
  *   → Then change FROM_EMAIL below to your domain
  */
 
-export async function onRequestPost(context) {
+export async function handleContact(request, env) {
   const CORS_HEADERS = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
@@ -28,7 +28,7 @@ export async function onRequestPost(context) {
   };
 
   try {
-    const body = await context.request.json();
+    const body = await request.json();
     const { name, phone, email, subject, message } = body;
 
     // --- Validation ---
@@ -42,7 +42,7 @@ export async function onRequestPost(context) {
     // --- Config ---
     const RECIPIENT = 'zaart45@gmail.com';
     const FROM_EMAIL = 'Black Pearl Tours <onboarding@resend.dev>'; // change after verifying your domain
-    const RESEND_API_KEY = context.env.RESEND_API_KEY;
+    const RESEND_API_KEY = env.RESEND_API_KEY;
 
     if (!RESEND_API_KEY) {
       console.error('RESEND_API_KEY is not set');
@@ -123,7 +123,7 @@ export async function onRequestPost(context) {
 }
 
 /** Handle CORS preflight */
-export async function onRequestOptions() {
+export function handleContactOptions() {
   return new Response(null, {
     status: 204,
     headers: {
