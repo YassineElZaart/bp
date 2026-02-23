@@ -198,6 +198,10 @@ ul { list-style: none; }
 .nav-links a:hover { color: var(--gold-lighter); }
 .nav-links a:hover::after { width: 100%; }
 
+.nav-cta {
+  display: flex;
+  gap: 8px;
+}
 .nav-cta .btn {
   padding: 10px 26px;
   font-size: 0.82rem;
