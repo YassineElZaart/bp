@@ -139,6 +139,7 @@ ul { list-style: none; }
   z-index: 1000;
   padding: 10px 0;
   background: transparent;
+  transition: padding 0.3s ease;
 }
 .header.scrolled {
   background: rgba(12,11,9,0.8);
@@ -160,7 +161,7 @@ ul { list-style: none; }
   height: 180px;
   width: auto;
   filter: drop-shadow(0 0 8px rgba(196, 178, 130, 0.3));
-  transition: filter 0.3s ease, transform 0.3s ease;
+  transition: filter 0.3s ease, transform 0.3s ease, height 0.3s ease;
 }
 .logo:hover .logo-img {
   transform: translateY(-2px);
@@ -1191,9 +1192,9 @@ ul { list-style: none; }
 }
 
 
-/* ===== WHATSAPP FLOAT (mobile only) ===== */
+/* ===== WHATSAPP FLOAT ===== */
 .whatsapp-float {
-  display: none;
+  display: flex;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -1210,10 +1211,6 @@ ul { list-style: none; }
 .whatsapp-float:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(37,211,102,0.5);
-}
-
-@media (max-width: 768px) {
-  .whatsapp-float { display: flex; }
 }
 
 
@@ -1238,6 +1235,13 @@ ul { list-style: none; }
   .mobile-cta-bar { display: flex; }
   .whatsapp-float { bottom: 80px; }
   .footer { padding-bottom: 70px; }
+
+  /* Shrink navbar on scroll (mobile) */
+  .header { padding: 6px 0; }
+  .header .logo-img { height: 120px; }
+  .header.scrolled { padding: 2px 0; }
+  .header.scrolled .logo-img { height: 60px; }
+
   .hero { min-height: auto; padding: 120px 0 80px; }
   .hero-stats { gap: 25px; flex-wrap: wrap; justify-content: center; }
   .branches-grid { grid-template-columns: repeat(2, 1fr); }
