@@ -158,7 +158,7 @@ ul { list-style: none; }
   align-items: center;
 }
 .logo-img {
-  height: 180px;
+  height: 220px;
   width: auto;
   filter: drop-shadow(0 0 8px rgba(196, 178, 130, 0.3));
   transition: filter 0.3s ease, transform 0.3s ease, height 0.3s ease;
