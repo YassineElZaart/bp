@@ -1237,8 +1237,6 @@ ul { list-style: none; }
   .footer { padding-bottom: 70px; }
 
   /* Shrink navbar on scroll (mobile) */
-  .header { padding: 6px 0; }
-  .header .logo-img { height: 120px; }
   .header.scrolled { padding: 2px 0; }
   .header.scrolled .logo-img { height: 60px; }
 
