@@ -1238,7 +1238,7 @@ ul { list-style: none; }
 
   /* Shrink navbar on scroll (mobile) */
   .header.scrolled { padding: 2px 0; }
-  .header.scrolled .logo-img { height: 60px; }
+  .header.scrolled .logo-img { height: 100px; }
 
   .hero { min-height: auto; padding: 120px 0 80px; }
   .hero-stats { gap: 25px; flex-wrap: wrap; justify-content: center; }
