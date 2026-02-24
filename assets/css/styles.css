@@ -1168,6 +1168,29 @@ ul { list-style: none; }
 }
 
 
+/* ===== MOBILE CTA STICKY BAR ===== */
+.mobile-cta-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 12px 16px;
+  gap: 10px;
+  background: rgba(12,11,9,0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(139,125,75,0.2);
+}
+.mobile-cta-bar .btn {
+  flex: 1;
+  justify-content: center;
+  padding: 12px 10px;
+  font-size: 0.85rem;
+}
+
+
 /* ===== WHATSAPP FLOAT (mobile only) ===== */
 .whatsapp-float {
   display: none;
@@ -1210,17 +1233,11 @@ ul { list-style: none; }
 
 @media (max-width: 768px) {
   .nav-links { display: none; }
-  .nav-cta {
-    display: flex;
-    gap: 6px;
-    margin-right: auto;
-    margin-left: 12px;
-  }
-  .nav-cta .btn {
-    padding: 7px 14px;
-    font-size: 0.7rem;
-  }
+  .nav-cta { display: none; }
   .mobile-toggle { display: flex; }
+  .mobile-cta-bar { display: flex; }
+  .whatsapp-float { bottom: 80px; }
+  .footer { padding-bottom: 70px; }
   .hero { min-height: auto; padding: 120px 0 80px; }
   .hero-stats { gap: 25px; flex-wrap: wrap; justify-content: center; }
   .branches-grid { grid-template-columns: repeat(2, 1fr); }
