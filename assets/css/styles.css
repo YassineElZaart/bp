@@ -133,13 +133,13 @@ ul { list-style: none; }
 /* ===== HEADER / NAV ===== */
 .header {
   position: fixed;
-  top: 0;
+  top: -10px;
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 10px 0;
+  padding: 0;
   background: transparent;
-  transition: padding 0.3s ease;
+  transition: padding 0.3s ease, top 0.3s ease;
 }
 .header.scrolled {
   background: rgba(12,11,9,0.8);
