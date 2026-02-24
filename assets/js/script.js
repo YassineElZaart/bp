@@ -5,36 +5,6 @@
 (function () {
   'use strict';
 
-  /* ----- Logo: remove white background (keep original colors) ----- */
-  function removeWhiteBg(img) {
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = img.naturalWidth;
-    canvas.height = img.naturalHeight;
-    ctx.drawImage(img, 0, 0);
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const data = imageData.data;
-
-    for (let i = 0; i < data.length; i += 4) {
-      const r = data[i], g = data[i + 1], b = data[i + 2];
-      if (r > 240 && g > 240 && b > 240) {
-        data[i + 3] = 0;
-      } else if (r > 220 && g > 220 && b > 220) {
-        const brightness = (r + g + b) / 3;
-        data[i + 3] = Math.round(((255 - brightness) / (255 - 220)) * 255);
-      }
-    }
-
-    ctx.putImageData(imageData, 0, 0);
-    img.src = canvas.toDataURL('image/png');
-  }
-
-  document.querySelectorAll('.logo-img').forEach(function (img) {
-    if (img.complete && img.naturalWidth > 0) removeWhiteBg(img);
-    else img.onload = function () { removeWhiteBg(img); };
-  });
-
-
   /* ----- Header scroll effect ----- */
   var header = document.getElementById('header');
   window.addEventListener('scroll', function () {
@@ -71,7 +41,9 @@
       e.preventDefault();
       var target = document.querySelector(this.getAttribute('href'));
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        var headerHeight = document.getElementById('header').offsetHeight;
+        var targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
         var nav = document.querySelector('.nav-links');
         if (nav) nav.classList.remove('show-mobile');
       }
