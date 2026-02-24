@@ -1,7 +1,7 @@
 /**
  * Cloudflare Pages Function — POST /api/contact
  *
- * Sends contact form emails to zaart45@gmail.com via Resend (free tier).
+ * Sends contact form emails to info@blackpearl-tours.com via Resend (free tier).
  *
  * SETUP (takes 2 minutes):
  * 1. Sign up free at https://resend.com
@@ -40,7 +40,7 @@ export async function handleContact(request, env) {
     }
 
     // --- Config ---
-    const RECIPIENT = 'zaart45@gmail.com';
+    const RECIPIENT = 'info@blackpearl-tours.com';
     const FROM_EMAIL = 'Black Pearl Tours <onboarding@resend.dev>'; // change after verifying your domain
     const RESEND_API_KEY = env.RESEND_API_KEY;
 
