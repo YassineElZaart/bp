@@ -1240,7 +1240,7 @@ ul { list-style: none; }
   .header.scrolled { padding: 2px 0; }
   .header.scrolled .logo-img { height: 100px; }
 
-  .hero { min-height: auto; padding: 120px 0 80px; }
+  .hero { min-height: auto; padding: 180px 0 80px; }
   .hero-stats { gap: 25px; flex-wrap: wrap; justify-content: center; }
   .branches-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-form { grid-template-columns: 1fr; }
