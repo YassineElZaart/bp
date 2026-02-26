@@ -724,16 +724,15 @@ ul { list-style: none; }
 }
 .dept-card-members span {
   font-size: 0.72rem;
-  color: rgba(255, 255, 255, 0.55);
-  background: rgba(255, 255, 255, 0.05);
+  color: var(--white);
+  background: none;
   padding: 3px 9px;
   border-radius: 6px;
-  transition: color 0.2s ease, background 0.2s ease;
+  transition: color 0.2s ease;
   line-height: 1.4;
 }
 .dept-card-members span:hover {
-  color: var(--white);
-  background: rgba(139, 125, 75, 0.2);
+  color: var(--gold-lighter);
 }
 
 
