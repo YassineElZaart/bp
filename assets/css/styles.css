@@ -142,10 +142,14 @@ ul { list-style: none; }
   transition: padding 0.3s ease, top 0.3s ease;
 }
 .header.scrolled {
+  top: 0;
   background: rgba(12,11,9,0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(139,125,75,0.12);
+}
+.header.scrolled .logo-img {
+  height: 120px;
 }
 .header .container {
   display: flex;
