@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Login - Black Pearl Tours</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(160deg, #0c0b09 0%, #151310 30%, #1a1710 60%, #0f0e0a 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -20%;
+      width: 900px;
+      height: 900px;
+      background: radial-gradient(circle, rgba(139,125,75,0.1) 0%, rgba(139,125,75,0.03) 40%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    body::after {
+      content: '';
+      position: absolute;
+      bottom: -25%;
+      left: -10%;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(196,178,130,0.06) 0%, transparent 60%);
+      border-radius: 50%;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 40px 20px;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .logo-img {
+      height: 180px;
+      width: auto;
+      margin: 0 auto 30px;
+      display: block;
+      filter: drop-shadow(0 0 10px rgba(196, 178, 130, 0.36));
+    }
+
+    .tagline {
+      font-family: 'Archivo', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: rgba(196, 178, 130, 0.7);
+      font-style: italic;
+      margin-bottom: 50px;
+      line-height: 1.6;
+    }
+
+    .login-options {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .login-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding: 40px 36px;
+      background: rgba(139,125,75,0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(139,125,75,0.15);
+      border-radius: 20px;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s ease;
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .login-card:hover {
+      transform: translateY(-5px);
+      background: rgba(139,125,75,0.1);
+      border-color: #8B7D4B;
+      box-shadow: 0 8px 30px rgba(139,125,75,0.15);
+    }
+
+    .login-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, #8B7D4B, #A89470);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+    }
+
+    .login-card h3 {
+      font-family: 'Archivo', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .login-card p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.5;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 50px;
+      color: rgba(196,178,130,0.6);
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: #C4B282;
+    }
+
+    @media (max-width: 480px) {
+      .login-options { flex-direction: column; }
+      .login-card { min-width: unset; }
+      .logo-img { height: 140px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="/">
+      <img src="logo.png" alt="Black Pearl Tours" class="logo-img">
+    </a>
+    <p class="tagline">"The world is a book &amp; those who do not travel read only a page"</p>
+
+    <div class="login-options">
+      <a href="https://online.blackpearlholiday.com/index.php?route=account/login" target="_blank" class="login-card">
+        <div class="login-icon">&#9992;</div>
+        <h3>Flights</h3>
+        <p>Charter flights booking system</p>
+      </a>
+      <a href="https://agency.blackpearlholiday.com/reseller/auth/" target="_blank" class="login-card">
+        <div class="login-icon">&#127976;</div>
+        <h3>Hotels</h3>
+        <p>Hotels booking system</p>
+      </a>
+    </div>
+
+    <a href="/" class="back-link">&larr; Back to Black Pearl Tours</a>
+  </div>
+
+</body>
+</html>
