@@ -1234,6 +1234,7 @@ ul { list-style: none; }
 }
 
 @media (max-width: 768px) {
+  .logo { margin-left: 0; }
   .nav-links { display: none; }
   .nav-cta { display: none; }
   .mobile-toggle { display: flex; }
