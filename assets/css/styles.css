@@ -149,7 +149,8 @@ ul { list-style: none; }
   border-bottom: 1px solid rgba(139,125,75,0.12);
 }
 .header.scrolled .logo-img {
-  height: 120px;
+  height: 150px;
+  margin: -20px 0;
 }
 .header .container {
   display: flex;
