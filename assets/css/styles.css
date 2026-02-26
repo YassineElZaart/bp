@@ -164,7 +164,7 @@ ul { list-style: none; }
 .logo-img {
   height: 220px;
   width: auto;
-  filter: drop-shadow(0 0 8px rgba(196, 178, 130, 0.3));
+  filter: drop-shadow(0 0 10px rgba(196, 178, 130, 0.36));
   transition: filter 0.3s ease, transform 0.3s ease, height 0.3s ease;
 }
 .logo:hover .logo-img {
