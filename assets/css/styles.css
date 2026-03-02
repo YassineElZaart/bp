@@ -342,15 +342,18 @@ ul { list-style: none; }
 .hero-card:nth-child(2) { margin-top: 0; }
 .hero-card:nth-child(3) { margin-top: 0; }
 .hero-card-icon {
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  width: 56px;
+  height: 56px;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
+  overflow: hidden;
   margin-bottom: 15px;
+  flex-shrink: 0;
+}
+.hero-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 .hero-card h4 {
   color: var(--white);
@@ -414,12 +417,12 @@ ul { list-style: none; }
   inset: 0;
   transition: transform 0.6s ease;
 }
-.branch-card:nth-child(1) .branch-bg { background: linear-gradient(180deg, #2d5016 0%, #1b3010 100%); }
-.branch-card:nth-child(2) .branch-bg { background: linear-gradient(180deg, #c44536 0%, #772e25 100%); }
-.branch-card:nth-child(3) .branch-bg { background: linear-gradient(180deg, #8B7D4B 0%, #564D32 100%); }
-.branch-card:nth-child(4) .branch-bg { background: linear-gradient(180deg, #e07a42 0%, #8b4513 100%); }
-.branch-card:nth-child(5) .branch-bg { background: linear-gradient(180deg, #2d6a4f 0%, #1b4332 100%); }
-.branch-card:nth-child(6) .branch-bg { background: linear-gradient(180deg, #6b5b3e 0%, #3d3222 100%); }
+.branch-card:nth-child(1) .branch-bg { background: url('../images/branches/lebanon.jpg') center/cover no-repeat; }
+.branch-card:nth-child(2) .branch-bg { background: url('../images/branches/istanbul.jpg') center/cover no-repeat; }
+.branch-card:nth-child(3) .branch-bg { background: url('../images/branches/uae.jpg') center/cover no-repeat; }
+.branch-card:nth-child(4) .branch-bg { background: url('../images/branches/ghana.jpg') center/cover no-repeat; }
+.branch-card:nth-child(5) .branch-bg { background: url('../images/branches/ksa.jpg') center/cover no-repeat; }
+.branch-card:nth-child(6) .branch-bg { background: url('../images/branches/syria.jpg') center/cover no-repeat; }
 .branch-overlay {
   position: absolute;
   inset: 0;
@@ -627,13 +630,16 @@ ul { list-style: none; }
   min-width: 100px;
 }
 .dept-featured-icon {
-  font-size: 2.2rem;
   width: 64px;
   height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.dept-featured-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 16px;
 }
 .dept-featured-title {
@@ -700,8 +706,17 @@ ul { list-style: none; }
   border-bottom: 1px solid rgba(139, 125, 75, 0.1);
 }
 .dept-card-icon {
-  font-size: 1.3rem;
+  width: 36px;
+  height: 36px;
   flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.dept-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 .dept-card-title {
   font-family: 'Archivo', sans-serif;
@@ -819,9 +834,18 @@ ul { list-style: none; }
 }
 .service-card:hover::before { opacity: 1; }
 .service-icon {
-  font-size: 2rem;
+  width: 60px;
+  height: 60px;
   margin-bottom: 14px;
   display: inline-block;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.service-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 .service-card h4 {
   font-family: 'Archivo', sans-serif;
@@ -867,15 +891,17 @@ ul { list-style: none; }
   border-color: var(--gold);
 }
 .umbrella-icon {
-  width: 70px;
-  height: 70px;
+  width: 120px;
+  height: 120px;
   margin: 0 auto 20px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
   border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8rem;
+  overflow: hidden;
+}
+.umbrella-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
 }
 .umbrella-card h4 { font-size: 1.15rem; font-weight: 700; color: var(--black); margin-bottom: 5px; }
 .umbrella-card .umbrella-loc { font-size: 0.78rem; color: var(--gold); font-weight: 600; margin-bottom: 12px; }
