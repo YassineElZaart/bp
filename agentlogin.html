@@ -51,8 +51,9 @@
       position: relative;
       z-index: 1;
       padding: 40px 24px;
-      max-width: 600px;
+      max-width: 480px;
       width: 100%;
+      margin: 0 auto;
     }
 
     .logo-img {
@@ -110,16 +111,13 @@
     .login-icon {
       width: 56px;
       height: 56px;
-      border-radius: 14px;
-      overflow: hidden;
       flex-shrink: 0;
     }
 
     .login-icon img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      border-radius: 14px;
+      object-fit: contain;
     }
 
     .login-text {
@@ -172,25 +170,12 @@
       color: #C4B282;
     }
 
-    /* Desktop: side-by-side cards */
     @media (min-width: 520px) {
-      .login-options {
-        flex-direction: row;
-        gap: 20px;
-      }
-      .login-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 36px 30px;
-        flex: 1;
-      }
-      .login-text { text-align: center; }
-      .login-arrow { display: none; }
+      .logo-img { height: 180px; }
       .login-icon {
         width: 64px;
         height: 64px;
       }
-      .logo-img { height: 180px; }
     }
   </style>
 </head>
