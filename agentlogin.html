@@ -13,6 +13,7 @@
     body {
       font-family: 'Roboto', sans-serif;
       min-height: 100vh;
+      min-height: 100dvh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -20,6 +21,7 @@
       color: #fff;
       position: relative;
       overflow: hidden;
+      -webkit-tap-highlight-color: transparent;
     }
 
     body::before {
@@ -48,102 +50,147 @@
       text-align: center;
       position: relative;
       z-index: 1;
-      padding: 40px 20px;
+      padding: 40px 24px;
       max-width: 600px;
       width: 100%;
     }
 
     .logo-img {
-      height: 180px;
+      height: 160px;
       width: auto;
-      margin: 0 auto 30px;
+      margin: 0 auto 20px;
       display: block;
       filter: drop-shadow(0 0 10px rgba(196, 178, 130, 0.36));
     }
 
     .tagline {
       font-family: 'Archivo', sans-serif;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 500;
       color: rgba(196, 178, 130, 0.7);
       font-style: italic;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       line-height: 1.6;
+      padding: 0 10px;
     }
 
     .login-options {
       display: flex;
-      gap: 24px;
-      justify-content: center;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 16px;
     }
 
     .login-card {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 16px;
-      padding: 40px 36px;
+      gap: 20px;
+      padding: 24px 28px;
       background: rgba(139,125,75,0.05);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(139,125,75,0.15);
-      border-radius: 20px;
+      border-radius: 16px;
       text-decoration: none;
       color: #fff;
       transition: all 0.3s ease;
-      flex: 1;
-      min-width: 220px;
+      min-height: 88px;
+    }
+
+    .login-card:active {
+      transform: scale(0.97);
+      background: rgba(139,125,75,0.12);
+      border-color: #8B7D4B;
     }
 
     .login-card:hover {
-      transform: translateY(-5px);
       background: rgba(139,125,75,0.1);
       border-color: #8B7D4B;
       box-shadow: 0 8px 30px rgba(139,125,75,0.15);
     }
 
     .login-icon {
-      width: 64px;
-      height: 64px;
-      background: linear-gradient(135deg, #8B7D4B, #A89470);
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .login-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+
+    .login-text {
+      text-align: left;
+      flex: 1;
     }
 
     .login-card h3 {
       font-family: 'Archivo', sans-serif;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
     }
 
     .login-card p {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.5);
-      line-height: 1.5;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.4;
+    }
+
+    .login-arrow {
+      color: rgba(196,178,130,0.4);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .login-card:hover .login-arrow,
+    .login-card:active .login-arrow {
+      color: rgba(196,178,130,0.8);
+      transform: translateX(4px);
     }
 
     .back-link {
-      display: inline-block;
-      margin-top: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 40px;
       color: rgba(196,178,130,0.6);
       font-size: 0.85rem;
       text-decoration: none;
       transition: color 0.3s ease;
+      padding: 12px 20px;
+      border-radius: 50px;
     }
 
-    .back-link:hover {
+    .back-link:hover,
+    .back-link:active {
       color: #C4B282;
     }
 
-    @media (max-width: 480px) {
-      .login-options { flex-direction: column; }
-      .login-card { min-width: unset; }
-      .logo-img { height: 140px; }
+    /* Desktop: side-by-side cards */
+    @media (min-width: 520px) {
+      .login-options {
+        flex-direction: row;
+        gap: 20px;
+      }
+      .login-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 36px 30px;
+        flex: 1;
+      }
+      .login-text { text-align: center; }
+      .login-arrow { display: none; }
+      .login-icon {
+        width: 64px;
+        height: 64px;
+      }
+      .logo-img { height: 180px; }
     }
   </style>
 </head>
@@ -157,14 +204,20 @@
 
     <div class="login-options">
       <a href="https://online.blackpearlholiday.com/index.php?route=account/login" target="_blank" class="login-card">
-        <div class="login-icon">&#9992;</div>
-        <h3>Flights</h3>
-        <p>Charter flights booking system</p>
+        <div class="login-icon"><img src="assets/images/icons/gold/flight.png" alt="Flights"></div>
+        <div class="login-text">
+          <h3>Flights</h3>
+          <p>Charter flights booking system</p>
+        </div>
+        <span class="login-arrow">&#8594;</span>
       </a>
       <a href="https://agency.blackpearlholiday.com/reseller/auth/" target="_blank" class="login-card">
-        <div class="login-icon">&#127976;</div>
-        <h3>Hotels</h3>
-        <p>Hotels booking system</p>
+        <div class="login-icon"><img src="assets/images/icons/gold/hotel.png" alt="Hotels"></div>
+        <div class="login-text">
+          <h3>Hotels</h3>
+          <p>Hotels booking system</p>
+        </div>
+        <span class="login-arrow">&#8594;</span>
       </a>
     </div>
 
