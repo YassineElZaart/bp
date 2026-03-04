@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <title>Agent Login - Black Pearl Tours</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,17 +14,14 @@
       font-family: 'Roboto', sans-serif;
       min-height: 100vh;
       min-height: 100dvh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       background: linear-gradient(160deg, #0c0b09 0%, #151310 30%, #1a1710 60%, #0f0e0a 100%);
       color: #fff;
       position: relative;
-      overflow: hidden;
+      overflow-x: hidden;
       -webkit-tap-highlight-color: transparent;
     }
 
-    body::before {
+    .page-wrap::before {
       content: '';
       position: absolute;
       top: -30%;
@@ -33,9 +30,10 @@
       height: 900px;
       background: radial-gradient(circle, rgba(139,125,75,0.1) 0%, rgba(139,125,75,0.03) 40%, transparent 70%);
       border-radius: 50%;
+      pointer-events: none;
     }
 
-    body::after {
+    .page-wrap::after {
       content: '';
       position: absolute;
       bottom: -25%;
@@ -44,6 +42,18 @@
       height: 700px;
       background: radial-gradient(circle, rgba(196,178,130,0.06) 0%, transparent 60%);
       border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .page-wrap {
+      width: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
     }
 
     .container {
@@ -181,32 +191,34 @@
 </head>
 <body>
 
-  <div class="container">
-    <a href="/">
-      <img src="logo.png" alt="Black Pearl Tours" class="logo-img">
-    </a>
-    <p class="tagline">"The world is a book &amp; those who do not travel read only a page"</p>
+  <div class="page-wrap">
+    <div class="container">
+      <a href="/">
+        <img src="logo.png" alt="Black Pearl Tours" class="logo-img">
+      </a>
+      <p class="tagline">"The world is a book &amp; those who do not travel read only a page"</p>
 
-    <div class="login-options">
-      <a href="https://online.blackpearlholiday.com/index.php?route=account/login" target="_blank" class="login-card">
-        <div class="login-icon"><img src="assets/images/icons/gold/flight.png" alt="Flights"></div>
-        <div class="login-text">
-          <h3>Flights</h3>
-          <p>Charter flights booking system</p>
-        </div>
-        <span class="login-arrow">&#8594;</span>
-      </a>
-      <a href="https://agency.blackpearlholiday.com/reseller/auth/" target="_blank" class="login-card">
-        <div class="login-icon"><img src="assets/images/icons/gold/hotel.png" alt="Hotels"></div>
-        <div class="login-text">
-          <h3>Hotels</h3>
-          <p>Hotels booking system</p>
-        </div>
-        <span class="login-arrow">&#8594;</span>
-      </a>
+      <div class="login-options">
+        <a href="https://online.blackpearlholiday.com/index.php?route=account/login" target="_blank" class="login-card">
+          <div class="login-icon"><img src="assets/images/icons/gold/flight.png" alt="Flights"></div>
+          <div class="login-text">
+            <h3>Flights</h3>
+            <p>Charter flights booking system</p>
+          </div>
+          <span class="login-arrow">&#8594;</span>
+        </a>
+        <a href="https://agency.blackpearlholiday.com/reseller/auth/" target="_blank" class="login-card">
+          <div class="login-icon"><img src="assets/images/icons/gold/hotel.png" alt="Hotels"></div>
+          <div class="login-text">
+            <h3>Hotels</h3>
+            <p>Hotels booking system</p>
+          </div>
+          <span class="login-arrow">&#8594;</span>
+        </a>
+      </div>
+
+      <a href="/" class="back-link">&larr; Back to Black Pearl Tours</a>
     </div>
-
-    <a href="/" class="back-link">&larr; Back to Black Pearl Tours</a>
   </div>
 
 </body>
