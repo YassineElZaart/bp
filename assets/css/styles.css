@@ -404,7 +404,7 @@ ul { list-style: none; }
   border-radius: var(--radius-lg);
   overflow: hidden;
   height: 300px;
-  cursor: pointer;
+  cursor: default;
   transition: var(--transition);
 }
 .branch-card:hover { transform: translateY(-8px); }
